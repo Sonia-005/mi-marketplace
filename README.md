@@ -74,13 +74,7 @@ cd backend
 npm run seed
 ```
 
-Esto crea 3 usuarios de demo y 6 servicios de ejemplo:
-
-| Nombre | Email | Contraseña | Rol |
-|--------|-------|-----------|-----|
-| Admin Demo | admin@freelancelocal.com | Admin1234 | freelancer |
-| Cliente Demo | cliente@freelancelocal.com | Cliente1234 | client |
-| Freelancer Demo | freelancer@freelancelocal.com | Freelancer1234 | freelancer |
+Esto crea 3 usuarios de demo y 6 servicios
 
 ### 4. Iniciar en modo desarrollo
 
@@ -143,6 +137,9 @@ VITE_API_URL=http://localhost:5000/api
 ### Backend en Render
 
 ### Frontend en Vercel
+
+
+## Funcionalidades
 
 - **Registro/Login** con selector de rol (cliente o freelancer)
 - **Explorar servicios** con filtros por categoría, precio y búsqueda de texto
