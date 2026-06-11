@@ -1,6 +1,6 @@
 # FreelanceLocal — Marketplace de Servicios Freelance
 
-Proyecto universitario: marketplace full-stack para contratar y ofrecer servicios freelance.
+marketplace full-stack para contratar y ofrecer servicios freelance.
 
 ## Stack Tecnológico
 
@@ -138,38 +138,11 @@ VITE_API_URL=http://localhost:5000/api
 | GET | /api/users/profile/:id | No | Perfil público |
 | PUT | /api/users/me | Auth | Editar mi perfil |
 
-## Deploy en producción
+## Deploy 
 
 ### Backend en Render
 
-1. Crear un nuevo **Web Service** en [render.com](https://render.com)
-2. Conectar el repositorio de GitHub
-3. Configurar:
-   - **Root Directory**: `backend`
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-4. Agregar todas las variables de entorno del `.env` en la sección "Environment"
-5. Cambiar `FRONTEND_URL` a la URL de Vercel una vez desplegado
-
 ### Frontend en Vercel
-
-1. Importar el proyecto en [vercel.com](https://vercel.com)
-2. Configurar:
-   - **Root Directory**: `frontend`
-   - **Framework Preset**: Vite
-3. Agregar variable de entorno:
-   - `VITE_API_URL` = URL de tu backend en Render (ej: `https://mi-api.onrender.com/api`)
-4. Deploy
-
-### Orden de deploy recomendado
-
-1. Primero despliega el backend en Render y copia la URL
-2. Configura `VITE_API_URL` en Vercel con esa URL
-3. Despliega el frontend en Vercel
-4. Actualiza `FRONTEND_URL` en Render con la URL de Vercel
-5. Ejecuta el seed desde tu máquina local apuntando a MongoDB Atlas
-
-## Funcionalidades
 
 - **Registro/Login** con selector de rol (cliente o freelancer)
 - **Explorar servicios** con filtros por categoría, precio y búsqueda de texto
