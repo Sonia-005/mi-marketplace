@@ -36,7 +36,8 @@ const seed = async () => {
 
   // ── USUARIOS ──────────────────────────────────────────────────────────────
   const admin      = await User.create({ name: 'Admin Demo',       email: 'admin@freelancelocal.com',       password: await h('Admin1234'),      role: 'admin',      isActive: true });
-  await User.create({ name: 'Demo User', email: 'demo@demo.com', password: await h('Demo1234'), role: 'client', isActive: true });
+  await User.create({ name: 'Demo User',  email: 'demo@demo.com',    password: await h('Demo1234'), role: 'client',     isActive: true });
+  await User.create({ name: 'Sonia Meza', email: 'yasper@email.com', password: await h('123456'),   role: 'freelancer', isActive: true, bio: 'Freelancer', skills: [] });
   const cliente    = await User.create({ name: 'Cliente Demo',     email: 'cliente@freelancelocal.com',     password: await h('Cliente1234'),    role: 'client',     isActive: true });
   const free1      = await User.create({ name: 'Freelancer Demo',  email: 'freelancer@freelancelocal.com',  password: await h('Freelancer1234'), role: 'freelancer', bio: 'Desarrollador web full-stack con 5 años de experiencia.', skills: ['React', 'Node.js', 'MongoDB'], isActive: true });
   const ana        = await User.create({ name: 'Ana García',       email: 'ana@freelancelocal.com',         password: await h('Ana12345'),       role: 'freelancer', bio: 'Diseñadora gráfica especializada en identidad visual.',   skills: ['Illustrator', 'Figma', 'Branding'], isActive: true });
@@ -110,7 +111,8 @@ const seed = async () => {
 
   console.log('\n✅ Seed completado exitosamente');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  console.log('  demo@demo.com                 / Demo1234        (client)  ← usuario de prueba');
+  console.log('  demo@demo.com                 / Demo1234        (client)     ← usuario de prueba');
+  console.log('  yasper@email.com              / 123456          (freelancer) ← tu cuenta personal');
   console.log('  admin@freelancelocal.com      / Admin1234       (admin)');
   console.log('  cliente@freelancelocal.com    / Cliente1234     (client)');
   console.log('  freelancer@freelancelocal.com / Freelancer1234  (freelancer)');
